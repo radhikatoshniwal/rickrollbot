@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
+import config
 import praw
 import time
 from random import randrange
 
-#reddit=praw.Reddit(client_id='EqfEWAel2dLp-A',client_secret='h23REgWjwkIHBgXyz1LdpELNST0IuA',user_agent='Python rick roll bot v1.0 (by /u/tobllorkcir)',username='tobllorkcir',password='kusum123')
-reddit=praw.Reddit(client_id='PBD3vKA8PCkibw',client_secret='3G2c_8fY6I4xYMtXTsn2Jbev1PrB4w',user_agent='Python rick roll bot v1.0 (by /u/tobllorkcir)',username='answer-reddit-bot',password='rads1234')
+
+reddit=praw.Reddit(client_id=config.client_id,client_secret=config.client_secret,user_agent='Python rick roll bot v1.0 (by /u/tobllorkcir)',username=config.username,password=config.password)
 
 
 # define the countdown func.
